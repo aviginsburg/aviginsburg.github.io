@@ -80,6 +80,10 @@ footer p {
   font-weight: 300;
 }
 
+.money {
+  width: 100%;
+}
+
 @media (max-width: 650px) {
   .wrapper,
   header,
