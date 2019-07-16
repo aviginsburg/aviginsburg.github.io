@@ -94,9 +94,9 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
-        margin: 0% 2.5%;
+        margin: 0 2.5%;
         grid-template-rows: auto;
-        grid-template-areas: /*"navbar" */ "header" "picture" "article" "blog" "footer";
+        grid-template-areas: "header" "picture" "article" "blog" "footer";
       }
       .picture {
         display: flex;
@@ -107,7 +107,7 @@
         grid-area: portrait;
       }
       .wrapper > * {
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: 300;
         border-radius: 10px;
       }
@@ -115,7 +115,7 @@
         grid-area: navbar;
       }
       .navbar ul {
-        padding-left: 0%;
+        padding-left: 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -126,7 +126,7 @@
         margin-right: 1.5%;
       }
       .dash {
-        color: black;
+        color: #000;
         font-weight: 300;
       }
       .links a {
@@ -198,7 +198,7 @@
         display: inline-block;
         cursor: pointer;
         border: 1px solid #3cbaf2;
-        color: white;
+        color: #fff;
         padding: 1em;
         display: flex;
         flex-flow: row wrap;
@@ -206,13 +206,13 @@
         justify-content: center;
       }
       .blog3:hover {
-        background-color: white;
-        color: rebeccapurple;
+        background-color: #fff;
+        color: #663399;
       }
       a {
         text-decoration: none;
         cursor: pointer;
-        color: black;
+        color: #000;
       }
       h1 {
         font-family: "Roboto Mono", monospace;
@@ -228,7 +228,7 @@
       }
       @media (min-width: 650px) {
         .wrapper {
-          margin: 0% 20%;
+          margin: 0 20%;
           grid-template-columns: repeat(1, 1fr);
           grid-gap: 10px;
           grid-template-rows: auto;
@@ -282,15 +282,15 @@
           align-self: stretch;
           justify-content: center;
           text-align: center;
-          border: 1px solid rebeccapurple;
+          border: 1px solid #663399;
         }
         .blog3 {
-          background-color: rebeccapurple;
+          background-color: #663399;
           grid-area: blog3;
-          border: 5px solid rebeccapurple;
+          border: 5px solid #663399;
         }
         .blog1 {
-          background-color: limegreen;
+          background-color: #32cd32;
           grid-area: blog1;
         }
         .blog2 {
@@ -299,13 +299,13 @@
           padding: 0.5em;
         }
         .blog3 a {
-          color: white;
+          color: #fff;
         }
         .blog3:hover {
-          background-color: white;
+          background-color: #fff;
         }
         .blog3:hover a {
-          color: rebeccapurple;
+          color: #663399;
         }
       }
     </style>
@@ -394,41 +394,6 @@
 
   <body>
     <div class="wrapper">
-      <!--
-        <div class="navbar">
-          <ul>
-            <li class="links"><a href="/">Home</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="/funstuff">Fun Stuff</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="https://www.linkedin.com/in/aviginsburg">LinkedIn</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="">Resume</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="">Essays</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="">Twitter</a></li>
-            <li class="dash">/</li>
-            <li class="links"><a href="">Updates</a></li>
-          </ul>
-        </div>
-      -->
-
-      <!-- Google Analytics for AMP -->
-      <!--
-        <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json">
-        {
-          "vars" : {
-            "gtag_id": "UA-135552616-1",
-            "config" : {
-              "UA-135552616-1": { "groups": "default" }
-            }
-          }
-        }
-        </script>
-      -->
-
       <header class="header"><h1 class="title">Avi Ginsburg</h1></header>
       <amp-img
         class="picture"
@@ -449,7 +414,8 @@
         </p>
         <p>
           I am a self taught programmer with experience in HTML, CSS,
-          Javascript, and React!
+          Javascript, and React! I have built web applications (link coming
+          soon).
         </p>
         <p>
           I have also designed parts for premium cars, worked on lunar space
@@ -459,6 +425,19 @@
       </main>
 
       <div class="footer"><p>Built by me ❤️</p></div>
+
+      <!--Google Analytics for AMP-->
+      <amp-analytics type="gtag" data-credentials="include">
+      <script type="application/json">
+      {
+        "vars" : {
+          "gtag_id": "UA-135552616-1",
+          "config" : {
+            "UA-135552616-1": { "groups": "default" }
+          }
+        }
+      }
+      </script>
     </div>
   </body>
 </html>
