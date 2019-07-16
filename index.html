@@ -1,396 +1,73 @@
 <!DOCTYPE html>
 <html ⚡ lang="en">
-  <head>
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1, initial-scale=1"
-    />
-    <meta charset="utf-8" />
-    <link rel="icon" href="public/lightbulb.png" />
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="icon" href="public/lightbulb.png">
 
-    <title>Avi Ginsburg</title>
-    <meta
-      name="description"
-      content="My name is Avi and I am an engineer! Come see what I've worked on and get in touch!"
-    />
-    <meta
-      name="keywords"
-      content="Avi Ginsburg, Feeden, Lunar Mission One, Jaguar Land Rover, 3D Printer"
-    />
+  <title>Avi Ginsburg</title>
+  <meta name="description" content="My name is Avi and I am an engineer! Come see what I've worked on and get in touch!" />
+  <meta name="keywords" content="Avi Ginsburg, Feeden, Lunar Mission One, Jaguar Land Rover, 3D Printer" />
 
-    <!-- AMP Stuff -->
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script
-      async
-      custom-element="amp-bind"
-      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-    ></script>
-    <link rel="canonical" href="http://www.aviginsburg.com" />
-    <style amp-boilerplate>
-      body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      }
-      @-webkit-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-moz-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-ms-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-o-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-    </style>
-    <noscript
-      ><style amp-boilerplate>
-        body {
-          -webkit-animation: none;
-          -moz-animation: none;
-          -ms-animation: none;
-          animation: none;
-        }
-      </style></noscript
-    >
+  <!--AMP Stuff-->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <link rel="canonical" href="http://www.aviginsburg.com" />
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-    <style amp-custom>
-      html {
-        box-sizing: border-box;
-        -webkit-font-smoothing: subpixel-antialiased;
-      }
-      .wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 20px;
-        margin: 0 2.5%;
-        grid-template-rows: auto;
-        grid-template-areas: "header" "picture" "article" "blog" "footer";
-      }
-      .picture {
-        display: flex;
-        border-radius: 5px;
-      }
-      .portrait {
-        display: none;
-        grid-area: portrait;
-      }
-      .wrapper > * {
-        font-family: Roboto, sans-serif;
-        font-weight: 300;
-        border-radius: 10px;
-      }
-      .navbar {
-        grid-area: navbar;
-      }
-      .navbar ul {
-        padding-left: 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: flex-end;
-      }
-      .navbar li {
-        display: inline-block;
-        margin-right: 1.5%;
-      }
-      .dash {
-        color: #000;
-        font-weight: 300;
-      }
-      .links a {
-        color: #2d20d7;
-        font-weight: 500;
-      }
-      .footer {
-        grid-area: footer;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        color: #2d20d7;
-      }
-      .header {
-        display: flex;
-        justify-content: center;
-        grid-area: header;
-      }
-      .article {
-        padding: 0.5em;
-        grid-area: article;
-      }
-      .article p {
-        font-family: "Roboto Mono", monospace;
-        font-size: 18px;
-        font-weight: 400;
-      }
-      .blog {
-        display: grid;
-        padding: 0.5em;
-        grid-area: blog;
-        grid-template-columns: 3fr;
-        grid-auto-rows: auto;
-        grid-template-areas: "sub-title sub-title sub-title" "text text text" "blogs blogs blogs";
-      }
-      .blog h1 {
-        grid-area: sub-title;
-      }
-      .blog p {
-        grid-area: text;
-      }
-      .blogs {
-        display: grid;
-        text-decoration: none;
-        padding-left: 0;
-        list-style-type: none;
-        grid-area: blogs;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-        grid-template-areas: "blog1 blog2" "blog3 blog3";
-        grid-gap: 10px;
-      }
-      .blog1 {
-        background-color: #0078dd;
-        grid-area: blog1;
-        padding: 0.5em;
-      }
-      .blog2 {
-        background-color: #1099e9;
-        grid-area: blog2;
-        padding: 0.5em;
-      }
-      .blog3 {
-        background-color: #3cbaf2;
-        grid-area: blog3;
-        padding: 0.5em;
-        border-radius: 5px;
-        display: inline-block;
-        cursor: pointer;
-        border: 1px solid #3cbaf2;
-        color: #fff;
-        padding: 1em;
-        display: flex;
-        flex-flow: row wrap;
-        align-self: center;
-        justify-content: center;
-      }
-      .blog3:hover {
-        background-color: #fff;
-        color: #663399;
-      }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-        color: #000;
-      }
-      h1 {
-        font-family: "Roboto Mono", monospace;
-        font-size: 42px;
-        color: #2d20d7;
-      }
-      p {
-        font-family: "Roboto Mono", sans-serif;
-        font-weight: 300;
-      }
-      .pages {
-        color: #2d20d7;
-      }
-      @media (min-width: 650px) {
-        .wrapper {
-          margin: 0 20%;
-          grid-template-columns: repeat(1, 1fr);
-          grid-gap: 10px;
-          grid-template-rows: auto;
-          grid-template-areas: "navbar" "header" "picture" "article" "blog" "footer";
-        }
-        .navbar {
-          grid-area: navbar;
-        }
-        amp-img {
-          grid-area: picture;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .blog {
-          display: grid;
-          padding: 0.5em;
-          grid-area: blog;
-          grid-template-columns: 3fr;
-          grid-auto-rows: auto;
-          grid-template-areas: "sub-title sub-title sub-title" "text text text" "blogs blogs blogs";
-        }
-        .blog h1 {
-          grid-area: sub-title;
-        }
-        .blog p {
-          grid-area: text;
-        }
-        .blogs {
-          display: grid;
-          text-decoration: none;
-          padding-left: 0;
-          list-style-type: none;
-          grid-area: blogs;
-          grid-template-columns: repeat(3, 1fr);
-          grid-auto-rows: auto;
-          grid-template-areas: "blog1 blog2 blog3";
-          grid-gap: 10px;
-        }
-        .blog1,
-        .blog2,
-        .blog3 {
-          padding: 0.5em;
-          border-radius: 5px;
-          display: inline-block;
-          cursor: pointer;
-          flex-direction: stretch;
-          padding: 1em;
-          display: flex;
-          flex-flow: row wrap;
-          align-self: stretch;
-          justify-content: center;
-          text-align: center;
-          border: 1px solid #663399;
-        }
-        .blog3 {
-          background-color: #663399;
-          grid-area: blog3;
-          border: 5px solid #663399;
-        }
-        .blog1 {
-          background-color: #32cd32;
-          grid-area: blog1;
-        }
-        .blog2 {
-          background-color: grey;
-          grid-area: blog2;
-          padding: 0.5em;
-        }
-        .blog3 a {
-          color: #fff;
-        }
-        .blog3:hover {
-          background-color: #fff;
-        }
-        .blog3:hover a {
-          color: #663399;
-        }
-      }
-    </style>
 
-    <!-- Google Search Console Verification -->
-    <meta
-      name="google-site-verification"
-      content="3Egxfg68FLdPLVzDxrHEvsJodmYMvGJHpJr2YtKx63g"
-    />
+  <style amp-custom>
+    html {box-sizing: border-box;-webkit-font-smoothing: subpixel-antialiased;}.wrapper {display: grid;grid-template-columns: repeat(1, 1fr);grid-gap: 20px;margin: 0% 2.5%; grid-template-rows: auto;grid-template-areas: "navbar" "header" "picture" "article" "blog" "footer";} .picture {display: flex; border-radius: 5px;}.portrait {display: none;grid-area: portrait;}.wrapper > * {font-family: 'Roboto', sans-serif;font-weight: 300; border-radius: 10px;}.navbar {grid-area: navbar;}.navbar ul {padding-left: 0%;display: flex;flex-flow: row wrap;justify-content: center;align-items: flex-end;}.navbar li {display: inline-block;margin-right: 1.5%;}.dash {color: black;font-weight: 300;}.links a {color: #000587;font-weight: 500;}.footer {grid-area: footer;display: flex;flex-flow: row wrap;justify-content: center;align-items: center;color: #04009E;}.header {display: flex;justify-content: center;grid-area: header;}.article {padding: 0.5em;grid-area: article;font-weight: 300;}.article p {font-family: 'Space Mono', monospace;font-size: 18px;}.blog {display: grid;padding: 0.5em;grid-area: blog;grid-template-columns: 3fr;grid-auto-rows: auto;grid-template-areas: "sub-title sub-title sub-title" "text text text" "blogs blogs blogs";}.blog h1 {grid-area: sub-title;}.blog p {grid-area: text;}.blogs {display: grid;text-decoration: none;padding-left: 0;list-style-type: none;grid-area: blogs;grid-template-columns: repeat(2, 1fr);grid-auto-rows: auto;grid-template-areas: "blog1 blog2" "blog3 blog3";grid-gap: 10px;}.blog1 {background-color: #0078DD;grid-area: blog1;padding: 0.5em;}.blog2 {background-color: #1099E9;grid-area: blog2;padding: 0.5em;}.blog3 {background-color: #3CBAF2;grid-area: blog3;padding: 0.5em;border-radius: 5px;display: inline-block;cursor: pointer;border: 1px solid #3CBAF2;color: white;padding: 1em;display: flex;flex-flow: row wrap;align-self: center;justify-content: center;}.blog3:hover {background-color: white;color: rebeccapurple;}a {text-decoration: none;cursor: pointer;color: black;}h1 {font-family: 'Roboto', sans-serif;font-weight: 700;font-size: px;}p {font-family: 'Roboto', sans-serif;font-weight: 300;}.pages {color: #5B30ED;}@media (min-width: 650px) {.wrapper {margin: 0% 15%;grid-template-columns: repeat(1, 1fr);grid-gap: 10px;grid-template-rows: auto;grid-template-areas: "navbar" "header" "picture" "article" "blog" "footer";}.navbar {grid-area: navbar;} amp-img {grid-area: picture; display: flex; justify-content: center; align-items: center;}.blog {display: grid;padding: 0.5em;grid-area: blog;grid-template-columns: 3fr;grid-auto-rows: auto;grid-template-areas: "sub-title sub-title sub-title" "text text text" "blogs blogs blogs";}.blog h1 {grid-area: sub-title;}.blog p {grid-area: text;}.blogs {display: grid;text-decoration: none;padding-left: 0;list-style-type: none;grid-area: blogs;grid-template-columns: repeat(3, 1fr);grid-auto-rows: auto;grid-template-areas: "blog1 blog2 blog3";grid-gap: 10px;}.blog1, .blog2, .blog3, {padding: 0.5em;border-radius: 5px;display: inline-block;cursor: pointer;flex-direction: stretch;padding: 1em;display: flex;flex-flow: row wrap;align-self: stretch;justify-content: center;text-align: center;border: 1px solid rebeccapurple;}.blog3 {background-color: rebeccapurple;grid-area: blog3;border: 5px solid rebeccapurple;}.blog1 {background-color: limegreen;grid-area: blog1;}.blog2 {background-color: grey;grid-area: blog2;padding: 0.5em;}.blog3 a {color: white;}.blog3:hover {background-color: white;}.blog3:hover a {color: rebeccapurple;}}
+  </style>
 
-    <!-- AMP Analytics Pt.1 -->
-    <script
-      async
-      custom-element="amp-analytics"
-      src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-    ></script>
+  <!--AMP Analytics Pt.1-->
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
-    <!-- Facebook Metadata -->
-    <meta property="og:url" content="https://aviginsburg.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Avi Ginsburg | Welcome to my site!" />
-    <meta
-      property="og:description"
-      content="Get to know me and what I'm working on at the moment."
-    />
-    <meta
-      property="og:image"
-      content="https://aviginsburg.com/public/images/seo/img_facebook_1200.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Avi Ginsburg's Personal Website" />
-    <meta property="”og:see_also”" content="www.aviginsburg.com/fun-stuff" />
-    <meta property="”og:see_also”" content="www.aviginsburg.com/resume" />
+  <!--Facebook Metadata-->
+  <meta property="og:url" content="www.aviginsburg.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Avi Ginsburg | Welcome to my site!"/>
+  <meta property="og:description" content="Get to know me and what I'm working on at the moment." />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="" />
+  <meta property="og:image:height" content="" />
+  <meta property="og:site_name" content="Avi Ginsburg's Personal Website" />
+  <meta property=”og:see_also” content="www.aviginsburg.com/fun-stuff" />
+  <meta property=”og:see_also” content="www.aviginsburg.com/resume" />
 
-    <!-- Twitter Metadata -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Avi Ginsburg | Welcome to my site!" />
-    <meta
-      name="twitter:description"
-      content="Get to know me and what I'm working on at the moment."
-    />
-    <meta
-      name="”twitter:image”"
-      content="https://aviginsburg.com/public/images/seo/img_twitter_560.png"
-    />
-    <meta name="twitter:image:width" content="800" />
-    <meta name="twitter:image:height" content="320" />
-    <meta name="”twitter:site”" content="" />
-    <meta name="”twitter:creator”" content="@avi_foodie" />
+  <!-- Twitter Metadata  -->
+  <meta property=”twitter:card” content="summary_large_image" />
+  <meta property=”twitter:image” content="" />
+  <meta property=”twitter:site” content="" />
+  <meta property=”twitter:creator” content="@avi_foodie" />
 
-    <!-- Structured Data - Breadcrumbs -->
-    <script type="application/ld+json">
+  -->
+  <!--Structured Data - Breadcrumbs-->
+  <script type="application/ld+json">
+    {
+     "@context": "http://schema.org",
+     "@type": "BreadcrumbList",                // Name of list type
+     "itemListElement":
+     [
       {
-       "@context": "http://schema.org",
-       "@type": "BreadcrumbList",                // Name of list type
-       "itemListElement":
-       [
-        {
-         "@type": "ListItem",
-         "position": 1,
-         "item":
-         {
-          "@id": "https://www.aviginsburg.com",    // Initial top level
-          "name": "My Website Homepage"
-          }
+       "@type": "ListItem",
+       "position": 1,
+       "item":
+       {
+        "@id": "https://www.aviginsburg.com",    // Initial top level
+        "name": "My Website Homepage"
         }
-       ]
       }
-    </script>
+     ]
+    }
+  </script>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Space+Mono"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700"
-      rel="stylesheet"
-    />
-  </head>
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
+</head>
 
   <body>
     <div class="wrapper">
